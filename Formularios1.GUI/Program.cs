@@ -17,7 +17,7 @@ namespace Formularios1.GUI
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Form1 formulario = new Form1();
+            FrmPrincipal formulario = new FrmPrincipal();
             
             Application.Run(formulario);
         }

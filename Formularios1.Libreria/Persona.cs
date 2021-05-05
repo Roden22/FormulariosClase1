@@ -10,16 +10,24 @@ namespace Formularios1.Libreria
     {
         private string _nombre;
         private string _apellido;
+        private string _estadoCivil;
+        private bool _activo;
 
-        public Persona(string nombre, string apellido)
+        public Persona(string nombre, string apellido, string estadoCivil, bool activo)
         {
             this._nombre = nombre;
             this._apellido = apellido;
+            this._activo = activo;
+            this._estadoCivil = estadoCivil;
         }
 
         public override string ToString()
         {
-            return $"{_apellido}, {_nombre}";
+            string act = "ACTIVO";
+            if (!_activo)
+                act = "DESACTIVADO";
+
+            return $"{_apellido}, {_nombre} - {_estadoCivil} ({act}) ";
         }
     }
 }
